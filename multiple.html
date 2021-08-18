@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple inheritence Has-A</title>
+</head>
+
+<body>
+    <input type="button" value="click" onclick="f1()">
+    <script>
+        class Grand {
+            show() {
+                document.write("grand Father");
+            }
+        }
+        class Parent {
+            display() {
+              
+                document.write("father");
+            }
+        }
+        class Child {
+            display2()
+             {
+                  var gra = new Grand();
+                gra.show();
+                var par = new Parent();
+                par.display();
+                document.write("child");
+            }
+
+        }
+        function f1() {
+            var chi = new Child();
+            chi.display2();
+
+        }
+    </script>
+</body>
+
+</html>

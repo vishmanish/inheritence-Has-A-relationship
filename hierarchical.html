@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multilevel in Has-A</title>
+</head>
+
+<body>
+    <input type="button" value="click" onclick="f1()">
+    <script>
+
+        class Parent 
+        {
+            show() {
+                document.write("main parent");
+            }
+        }
+        class Child1
+         {
+            display() 
+            {
+                var par = new Parent();
+                par.show();
+                document.write("child1");
+            }
+
+        }
+        class Child2
+         {
+                display1() {
+                    var par = new Parent();
+                    par.show();
+                    document.write("child2");
+                }
+
+            }
+        function f1() {
+            var chi1 = new Child1();
+            chi1.display();
+            var chi2 = new Child2();
+            chi2.display1();
+
+        }
+    </script>
+</body>
+
+</html>
